@@ -20,12 +20,12 @@
             background-color: #444;
             color: #fff;
             text-align: center;
-            padding: 10px;
+            padding: 20px 0; /* Increased padding */
         }
         nav a {
             color: #fff;
             text-decoration: none;
-            margin: 0 10px;
+            margin: 0 20px; /* Increased margin */
         }
         nav a:hover {
             text-decoration: underline;
@@ -107,11 +107,11 @@
     <div id="home" class="container active">
         <div class="profile">
             <img src="your-photo.jpg" alt="Your Photo">
-            <h1>Your Name</h1>
-            <p>Your Role</p>
         </div>
         <div class="content">
             <!-- Content for home page -->
+            <h1>Your Name</h1>
+            <p>Your Role</p>
             <p>Welcome to my portfolio!</p>
         </div>
     </div>
@@ -196,4 +196,16 @@
                 <label for="lname">Last Name:</label><br>
                 <input type="text" id="lname" name="lname"><br>
                 <label for="message">Message:</label><br>
-               
+            </form>
+            <button onclick="sendMessage()">Send Message</button>
+        </div>
+    </div>
+
+    <!-- JavaScript for sending message -->
+    <script>
+        function sendMessage() {
+            alert("Message sent successfully!");
+        }
+    </script>
+</body>
+</html>
