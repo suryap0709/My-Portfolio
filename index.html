@@ -81,18 +81,17 @@
         <div class="dropdown">
             <span class="dropdown-title">Skills</span>
             <div class="dropdown-content">
-                <a href="#skills1">Skill 1</a>
-                <a href="#skills2">Skill 2</a>
-                <a href="#skills3">Skill 3</a>
+                <a href="#skills1">Programming Languages</a>
+                <a href="#skills2">Frameworks</a>
                 <!-- Add more skills as needed -->
             </div>
         </div>
         <div class="dropdown">
             <span class="dropdown-title">Work History</span>
             <div class="dropdown-content">
-                <a href="#company1">Company 1</a>
-                <a href="#company2">Company 2</a>
-                <!-- Add more work experiences as needed -->
+                <a href="#work1">Company 1</a>
+                <a href="#work2">Company 2</a>
+                <!-- Add more work history as needed -->
             </div>
         </div>
         <div class="dropdown">
@@ -128,48 +127,73 @@
             <p>Education</p>
         </div>
     </div>
-    <div id="skills" class="container">
+    <div id="skills1" class="container">
         <div class="content">
             <!-- Content for skills page -->
-            <p>Skills</p>
+            <p>Programming Languages</p>
+            <ul>
+                <li>Language 1</li>
+                <li>Language 2</li>
+                <!-- Add more programming languages as needed -->
+            </ul>
         </div>
     </div>
-    <div id="work" class="container">
+    <div id="skills2" class="container">
+        <div class="content">
+            <!-- Content for skills page -->
+            <p>Frameworks</p>
+            <ul>
+                <li>Framework 1</li>
+                <li>Framework 2</li>
+                <!-- Add more frameworks as needed -->
+            </ul>
+        </div>
+    </div>
+    <div id="work1" class="container">
         <div class="content">
             <!-- Content for work history page -->
-            <p>Work History</p>
+            <p>Company 1</p>
+            <p>Role: Your Role</p>
+            <p>From: Start Date - To: End Date</p>
         </div>
     </div>
-    <div id="projects" class="container">
+    <div id="work2" class="container">
         <div class="content">
-            <!-- Content for projects page -->
-            <p>Projects</p>
+            <!-- Content for work history page -->
+            <p>Company 2</p>
+            <p>Role: Your Role</p>
+            <p>From: Start Date - To: End Date</p>
+        </div>
+    </div>
+    <div id="project1" class="container">
+        <div class="content">
+            <!-- Content for project page -->
+            <p>Project 1</p>
+            <p>Abstract: Project abstract goes here</p>
+            <p>Motive: Project motive goes here</p>
+            <p>Requirements: Project requirements go here</p>
+            <p>Explanation: Project explanation goes here</p>
+            <p>Tools: Tools used in the project go here</p>
+        </div>
+    </div>
+    <div id="project2" class="container">
+        <div class="content">
+            <!-- Content for project page -->
+            <p>Project 2</p>
+            <p>Abstract: Project abstract goes here</p>
+            <p>Motive: Project motive goes here</p>
+            <p>Requirements: Project requirements go here</p>
+            <p>Explanation: Project explanation goes here</p>
+            <p>Tools: Tools used in the project go here</p>
         </div>
     </div>
     <div id="contact" class="container">
         <div class="content">
             <!-- Content for contact page -->
-            <p>Contact Me</p>
-        </div>
-    </div>
-
-    <!-- JavaScript for navigation -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const navLinks = document.querySelectorAll('nav a');
-            const containers = document.querySelectorAll('.container');
-
-            navLinks.forEach(link => {
-                link.addEventListener('click', function(event) {
-                    event.preventDefault();
-                    const targetId = this.getAttribute('href').substring(1);
-                    containers.forEach(container => {
-                        container.classList.remove('active');
-                    });
-                    document.getElementById(targetId).classList.add('active');
-                });
-            });
-        });
-    </script>
-</body>
-</html>
+            <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+                <label for="fname">First Name:</label><br>
+                <input type="text" id="fname" name="fname"><br>
+                <label for="lname">Last Name:</label><br>
+                <input type="text" id="lname" name="lname"><br>
+                <label for="message">Message:</label><br>
+               
