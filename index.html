@@ -31,25 +31,24 @@
             text-decoration: underline;
         }
         .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
+            display: none;
+        }
+        .active {
+            display: block;
         }
         .profile {
-            flex: 0 0 40%;
+            float: right;
             text-align: center;
+            padding: 20px;
         }
         .profile img {
-            width: 80%;
+            width: 200px;
             border-radius: 50%;
         }
         .profile h1 {
             margin-top: 10px;
         }
         .content {
-            flex: 0 0 55%;
             padding: 20px;
         }
         /* Add more styling as needed */
@@ -69,7 +68,7 @@
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
     </nav>
-    <div id="home" class="container">
+    <div id="home" class="container active">
         <div class="profile">
             <img src="your-photo.jpg" alt="Your Photo">
             <h1>Your Name</h1>
@@ -77,37 +76,63 @@
         </div>
         <div class="content">
             <!-- Content for home page -->
+            <p>Welcome to my portfolio!</p>
         </div>
     </div>
     <div id="about" class="container">
         <div class="content">
             <!-- Content for about page -->
+            <p>About Me</p>
         </div>
     </div>
     <div id="education" class="container">
         <div class="content">
             <!-- Content for education page -->
+            <p>Education</p>
         </div>
     </div>
     <div id="skills" class="container">
         <div class="content">
             <!-- Content for skills page -->
+            <p>Skills</p>
         </div>
     </div>
     <div id="work" class="container">
         <div class="content">
             <!-- Content for work history page -->
+            <p>Work History</p>
         </div>
     </div>
     <div id="projects" class="container">
         <div class="content">
             <!-- Content for projects page -->
+            <p>Projects</p>
         </div>
     </div>
     <div id="contact" class="container">
         <div class="content">
             <!-- Content for contact page -->
+            <p>Contact Me</p>
         </div>
     </div>
+
+    <!-- JavaScript for navigation -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('nav a');
+            const containers = document.querySelectorAll('.container');
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    containers.forEach(container => {
+                        container.classList.remove('active');
+                    });
+                    document.getElementById(targetId).classList.add('active');
+                });
+            });
+        });
+    </script>
 </body>
 </html>
