@@ -30,22 +30,24 @@
             padding: 20px;
         }
         .home {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;
+            padding: 0 20px;
+            background-color: #f4f4f4;
             background-image: url('your-photo.jpg');
             background-size: cover;
-            background-position: center;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            background-position: center right;
+            position: relative;
         }
-        .home h1 {
-            font-size: 3em;
-            margin-bottom: 10px;
+        .home h1, .home h2 {
+            opacity: 0;
+            animation: revealText 2s forwards;
         }
-        .home h2 {
-            font-size: 1.5em;
-            margin-top: 0;
+        @keyframes revealText {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
         }
         .container {
             max-width: 800px;
